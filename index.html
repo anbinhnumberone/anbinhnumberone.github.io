@@ -10,189 +10,19 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>     
-    <style>
-        #name {
-            color: black;
-            font-family: 'Times New Roman', Times, serif;
-            z-index: 1;
-        }  
-        #skypeid {
-            color: orange;
-            font-family: 'Times New Roman', Times, serif;
-            z-index: 2;
-        }    
-        #phone {
-            color: blue;
-            font-family: 'Times New Roman', Times, serif;
-            z-index: 3;
-        }    
-        #email {
-            color: yellowgreen;
-            font-family: 'Times New Roman', Times, serif;
-            z-index: 4;
-        }    
-        #stack1 {
-            color: blueviolet;
-            font-family: 'Times New Roman', Times, serif;
-            z-index: 5;
-        }    
-        #stack2 {
-            color: chocolate;
-            font-family: 'Times New Roman', Times, serif;
-            z-index: 6;
-        }  
-        #stack3 {
-            color: black;
-            font-family: 'Times New Roman', Times, serif;
-            z-index: 7;
-        }          
-        #img_main {
-            z-index: 0;
-        }    
-    </style>
 </head>
+<style>
+    .embed-responsive-16by9 {
+        padding-bottom: 50.0%;
+    }
+</style>
 <body>
     
-    <div class="containeer-fluid p-3">
-        <div class="row">
-            <div class="col-md-1 text-center">
-                <h1 class="font-weight-bold text-white">I</h1>
-            </div>
-            <div class="col-md-10 text-center">
-                <h1 id="name" class="font-weight-bold">Fullname: Nguyễn Văn Thế</h1>
-                <h1 id="skypeid" class="font-weight-bold">SkypeID: teotiengiang1981</h1>
-                <h1 id="phone" class="font-weight-bold">Phone: +84.929.196.754</h1>
-                <h1 id="email" class="font-weight-bold">Email: nguyenlogos@gmail.com</h1>
-                <h1 id="stack1" class="font-weight-bold">Stack 1: Win-TomCat-JAVA-Orcle</h1>
-                <h1 id="stack2" class="font-weight-bold">Stack 2: Ubuntu-Apache-PHP-MySQL</h1>
-                <h1 id="stack3" class="font-weight-bold">Stack 3: Win-IIS-MSSQL-C#.NET</h1>
-            </div>
-            <div class="col-md-1 text-center">
-                <h1 class="font-weight-bold text-white">I</h1>
-            </div>
-
-        </div>
+    <div class="container-fluid embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item"
+        src="https://anbinhnumberone.github.io/index1.html" allow = "autoplay" allowfullscreen>
+        </iframe>
     </div>
-    <div class="containeer-fluid m-auto ">
-        <div class="row">
-            <div class="col-md-12 text-center my-auto">
-                <img id="img_main" src="MJ.png" width="30%">
-            </div>
-        </div>
-    </div>
-    <div class="containeer-fluid m-auto ">
-        <div class="row">
-            <div class="col-md-12 text-center my-auto">
-                <audio id="myAudio" controls autoplay="autoplay" preload="auto">
-                    <source src="MJ.mp3" type="audio/mpeg">
-                </audio>
-            </div>
-        </div>
-    </div>
+ 
 </body>
 </html>
-<script>
-    var a = document.getElementById("myAudio").autoplay;
-    var x= screen.width - 450;
-    var y = screen.height  - 200;
-    $('#name').fadeOut(1);
-    $('#skypeid').fadeOut(1);
-    $('#phone').fadeOut(1);
-    $('#email').fadeOut(1);
-    $('#stack1').fadeOut(1);
-    $('#stack2').fadeOut(1);
-    $('#stack3').fadeOut(1);
-
-
-    setInterval(function(){
-        var choice = Math.floor(Math.random() * 6);
-        switch (choice)
-        {
-            case 0: nameid();break;
-            case 1: skypeid();break;
-            case 2: phone();break;
-            case 3: email();break;
-            case 4: stack1();break;
-            case 5: stack2();break;
-            case 6: stack3();break;
-
-        }
-
-    }, 2500);
-    function nameid()
-    {
-        // var positionX = Math.floor(Math.random() * x);
-        // var positionY = Math.floor(Math.random() * y);
-        // $("#name").css("left", positionX);
-        // $("#name").css("top", positionY);
-        $("#name").css("color", "#"+((1<<24)*Math.random()|0).toString(16));
-        $('#name').fadeIn(1000);
-        $('#name').fadeOut(1000);
-
-    };
-
-    function skypeid()
-    {
-        // var positionX = Math.floor(Math.random() * x);
-        // var positionY = Math.floor(Math.random() * y);
-        // $("#skypeid").css("left", positionX);
-        // $("#skypeid").css("top", positionY);
-        $("#skypeid").css("color", "#"+((1<<24)*Math.random()|0).toString(16));
-        $('#skypeid').fadeIn(1000);
-        $('#skypeid').fadeOut(1000);
-    };
-
-    function phone()
-    {
-        // var positionX = Math.floor(Math.random() * x);
-        // var positionY = Math.floor(Math.random() * y);
-        // $("#phone").css("left", positionX);
-        // $("#phone").css("top", positionY);
-        $("#phone").css("color", "#"+((1<<24)*Math.random()|0).toString(16));
-        $('#phone').fadeIn(1000);
-        $('#phone').fadeOut(1000);
-
-    };
-
-    function email()
-    {
-        // var positionX = Math.floor(Math.random() * x);
-        // var positionY = Math.floor(Math.random() * y);
-        // $("#email").css("left", positionX);
-        // $("#email").css("top", positionY);
-        $("#email").css("color", "#"+((1<<24)*Math.random()|0).toString(16));
-        $('#email').fadeIn(1000);
-        $('#email').fadeOut(1000);
-
-    };
-    function stack1()
-    {
-        var positionX = Math.floor(Math.random() * x);
-        var positionY = Math.floor(Math.random() * y);
-        $("#stack1").css("left", positionX);
-        $("#stack1").css("top", positionY);
-        $("#stack1").css("color", "#"+((1<<24)*Math.random()|0).toString(16));
-        $('#stack1').fadeIn(1000);
-        $('#stack1').fadeOut(1000);
-    };
-    function stack2()
-    {
-        // var positionX = Math.floor(Math.random() * x);
-        // var positionY = Math.floor(Math.random() * y);
-        // $("#stack2").css("left", positionX);
-        // $("#stack2").css("top", positionY);
-        $("#stack2").css("color", "#"+((1<<24)*Math.random()|0).toString(16));
-        $('#stack2').fadeIn(1000);
-        $('#stack2').fadeOut(1000);
-    };
-    function stack3()
-    {
-        // var positionX = Math.floor(Math.random() * x);
-        // var positionY = Math.floor(Math.random() * y);
-        // $("#stack3").css("left", positionX);
-        // $("#stack3").css("top", positionY);
-        $("#stack3").css("color", "#"+((1<<24)*Math.random()|0).toString(16));
-        $('#stack3').fadeIn(1000);
-        $('#stack3').fadeOut(1000);
-    };
-</script>
